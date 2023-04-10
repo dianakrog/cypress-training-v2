@@ -1,0 +1,17 @@
+{
+  "name": "cypress-training-v2",
+  "version": "1.0.0",
+  "description": "This is a Workshop about Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "cypress"
+  ],
+  "author": "Diana Gutierrez dianacaro46@hotmail.com (dianakrog)",
+  "license": "MIT"
+}
