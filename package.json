@@ -16,6 +16,7 @@
   "author": "Diana Gutierrez dianacaro46@hotmail.com (dianakrog)",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^12.9.0"
+    "cypress": "^12.9.0",
+    "typescript": "^5.0.4"
   }
 }
