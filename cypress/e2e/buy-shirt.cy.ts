@@ -14,8 +14,8 @@ describe('Buy a black t-shirt', () => {
     cy.get('#continue').click()
     cy.get('#finish').click()
     cy.get('#contents_wrapper > .checkout_complete_container > h2').should(
-        'have.text',
-        'Thank you for your order!'
+      'have.text',
+      'Thank you for your order!'
     )
   })
 })
