@@ -5,7 +5,7 @@ class CheckoutCompletePage {
     this.completeContainer='#checkout_complete_container > h2';
     }
 
-  public checkoutOrdenComplete(messageComplete: string): void {
+  public verifyOrderCompletion(messageComplete: string): void {
     cy.get(this.completeContainer)
       .should('have.text', messageComplete)     
     }
