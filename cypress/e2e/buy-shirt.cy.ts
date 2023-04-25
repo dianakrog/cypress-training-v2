@@ -1,16 +1,16 @@
 import {
   ItemPage, LoginPage, ProductListPage,
   ShoppingCartPage, CheckoutCompletePage,
-  InformationPage, OverViewPage
+  InformationPage, OverviewPage
 } from '../page'
 
 const loginPage = new LoginPage()
 const productList = new ProductListPage()
 const shoppingCart = new ShoppingCartPage()
 const itemPage = new ItemPage()
-const checkoutComplete = new CheckoutCompletePage()
+const verifyOrderCompletion = new CheckoutCompletePage()
 const informationPage = new InformationPage()
-const overViewe = new OverViewPage()
+const overviewe = new OverviewPage()
 const userName = 'standard_user'
 const pass = 'secret_sauce'
 const firstName = 'Cypress'
@@ -27,7 +27,7 @@ describe('Buy a black t-shirt', () => {
     shoppingCart.goShoppingCart()
     shoppingCart.checkoutCart()
     informationPage.checkoutUserInformation(firstName, lastName, postalCode)
-    overViewe.finishOverview()
-    checkoutComplete.checkoutOrdenComplete(messageValidateOrderComplete)
+    overviewe.finishOverview()
+    verifyOrderCompletion.checkoutOrdenComplete(messageValidateOrderComplete)
   })
 })

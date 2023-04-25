@@ -1,4 +1,4 @@
-class OverViewPage {
+class OverviewPage {
   private btnFinish: string;
 
   constructor() {
@@ -10,4 +10,4 @@ class OverViewPage {
     }
 }
 
-export { OverViewPage };
+export { OverviewPage };
