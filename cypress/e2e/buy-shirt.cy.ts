@@ -22,19 +22,14 @@ describe('Buy a black t-shirt', () => {
   it('then the t-shirt should be bought', () => {
     // Arrange
     loginPage.visitLoginPage()
-    loginPage.setUserName(userName)
-    loginPage.setPassword(pass)
-    loginPage.signIn()
+    loginPage.signIn(userName, pass)
 
     // Act
     productList.selectTShirt()
     itemPage.addTShirtItem()
     shoppingCart.goShoppingCart()
     shoppingCart.checkoutCart()
-    informationPage.writeFirstName(firstName)
-    informationPage.writeLastName(lastName)
-    informationPage.writepostalCode(postalCode)
-    informationPage.checkoutUserInformation()
+    informationPage.checkoutUserInformation(firstName, lastName, postalCode)
     overviewe.finishOverview()
 
     // Assert
