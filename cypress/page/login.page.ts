@@ -15,9 +15,15 @@ class LoginPage {
     cy.visit(this.loginURL);
   }
   
-  public signIn(userName: string, password: string): void {
+  public setUserName(userName: string): void {
     cy.get(this.userNameField).type(userName);
+    }
+
+  public setPassword(password: string): void {
     cy.get(this.passwordField).type(password);
+    }
+
+  public signIn(): void {
     cy.get(this.loginButton).click();
     }
 }

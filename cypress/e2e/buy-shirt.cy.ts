@@ -20,14 +20,24 @@ const messageValidateOrderComplete = 'Thank you for your order!'
 
 describe('Buy a black t-shirt', () => {
   it('then the t-shirt should be bought', () => {
+    //Arrange
     loginPage.visitLoginPage()
-    loginPage.signIn(userName, pass)
+    loginPage.setUserName(userName)
+    loginPage.setPassword(pass)
+    loginPage.signIn()
+
+    //Act
     productList.selectTShirt()
     itemPage.addTShirtItem()
     shoppingCart.goShoppingCart()
     shoppingCart.checkoutCart()
-    informationPage.checkoutUserInformation(firstName, lastName, postalCode)
+    informationPage.writeFirstName(firstName)
+    informationPage.writeLastName(lastName)
+    informationPage.writepostalCode(postalCode)
+    informationPage.checkoutUserInformation()
     overviewe.finishOverview()
+
+    //Assert
     checkout.verifyOrderCompletion(messageValidateOrderComplete)
   })
 })

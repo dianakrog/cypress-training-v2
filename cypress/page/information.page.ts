@@ -1,20 +1,29 @@
 class InformationPage {
-  private writeFirstName: string;
-  private writeLastName: string;
-  private writepostalCode: string;
+  private fildFirstName: string;
+  private fildLastName: string;
+  private filsPostalCode: string;
   private btnContinue: string;
 
   constructor() {
-    this.writeFirstName='#first-name';
-    this.writeLastName='#last-name';
-    this.writepostalCode='#postal-code';
+    this.fildFirstName='#first-name';
+    this.fildLastName='#last-name';
+    this.filsPostalCode='#postal-code';
     this.btnContinue = '#continue';
     }
 
-  public checkoutUserInformation(firstName: string, lastName: string, postalCode: string): void {
-    cy.get(this.writeFirstName).type(firstName);
-    cy.get(this.writeLastName).type(lastName);
-    cy.get(this.writepostalCode).type(postalCode);
+  public writeFirstName(firstName: string): void {
+    cy.get(this.fildFirstName).type(firstName);
+    }
+
+  public writeLastName(lastName: string): void {
+    cy.get(this.fildLastName).type(lastName);
+    }
+
+  public writepostalCode(postalCode: string): void {
+    cy.get(this.filsPostalCode).type(postalCode);
+    }
+
+  public checkoutUserInformation(): void {
     cy.get(this.btnContinue).click();
     }
 }
