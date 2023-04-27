@@ -1,11 +1,9 @@
 class ProductListPage {
   private productList: string;
-  private tShirtItem: string;
   private btnAddTShirtItem: string;
 
   constructor() {
     this.productList = '#inventory_container';
-    this.tShirtItem = '#item_1_img_link';
     this.btnAddTShirtItem = '#add-to-cart-sauce-labs-bolt-t-shirt'
     }
 

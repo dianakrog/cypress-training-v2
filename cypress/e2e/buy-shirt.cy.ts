@@ -1,5 +1,5 @@
 import {
-  ItemPage, LoginPage, ProductListPage,
+  LoginPage, ProductListPage,
   ShoppingCartPage, CheckoutCompletePage,
   InformationPage, OverviewPage
 } from '../page'
@@ -7,7 +7,6 @@ import {
 const loginPage = new LoginPage()
 const productList = new ProductListPage()
 const shoppingCart = new ShoppingCartPage()
-const itemPage = new ItemPage()
 const checkout = new CheckoutCompletePage()
 const informationPage = new InformationPage()
 const overviewe = new OverviewPage()
