@@ -16,6 +16,7 @@ const pass = 'secret_sauce'
 const firstName = 'Cypress'
 const lastName = 'Workshop'
 const postalCode = '00000'
+const itemTShirt = 'Sauce Labs Bolt T-Shirt'
 const messageValidateOrderComplete = 'Thank you for your order!'
 
 describe('Buy a black t-shirt', () => {
@@ -25,8 +26,7 @@ describe('Buy a black t-shirt', () => {
     loginPage.signIn(userName, pass)
 
     // Act
-    productList.selectTShirt()
-    itemPage.addTShirtItem()
+    productList.addToCartItem(itemTShirt)
     shoppingCart.goShoppingCart()
     shoppingCart.checkoutCart()
     informationPage.checkoutUserInformation(firstName, lastName, postalCode)
