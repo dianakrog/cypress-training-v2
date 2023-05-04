@@ -12,7 +12,7 @@ class ProductListPage {
     }
 
   private findProductByName (inventoryItem: string) {
-    return cy.get(this.productList).find('>div').filter(`:contains(${inventoryItem})`);
+    return cy.get(this.productList).filter(`:contains(${inventoryItem})`);
   }
 }
 
