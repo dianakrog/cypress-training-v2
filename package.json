@@ -10,8 +10,8 @@
     "lint:fix": "npm run lint -- --fix",
     "combine:reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/report.json",
     "generate:reports": "marge cypress/reports/report.json -f report -o cypress/reports",
-    "runtest": "npm run test && npm run combine:reports && npm run generate:reports",
-    "postruntest": "rm cypress/reports/mocha/* || true"
+    "posttest": "npm run combine:reports && npm run generate:reports",
+    "pretest": "rm cypress/reports/mocha/* || true"
   },
   "keywords": [
     "ui-testing",
