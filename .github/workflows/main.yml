@@ -23,3 +23,9 @@ jobs:
 
       - name: Run Test
         run: npm run runtest
+      
+      - name: Archive test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-test-report
+          path: home/runner/work/cypress-training-v2/cypress-training-v2/cypress/reports/report.html
