@@ -1,5 +1,5 @@
 import {
-  ItemPage, LoginPage, ProductListPage,
+  LoginPage, ProductListPage,
   ShoppingCartPage, CheckoutCompletePage,
   InformationPage, OverviewPage
 } from '../page'
@@ -7,7 +7,6 @@ import {
 const loginPage = new LoginPage()
 const productList = new ProductListPage()
 const shoppingCart = new ShoppingCartPage()
-const itemPage = new ItemPage()
 const checkout = new CheckoutCompletePage()
 const informationPage = new InformationPage()
 const overviewe = new OverviewPage()
@@ -16,6 +15,7 @@ const pass = 'secret_sauce'
 const firstName = 'Cypress'
 const lastName = 'Workshop'
 const postalCode = '00000'
+const itemTShirt = 'Sauce Labs Bolt T-Shirt'
 const messageValidateOrderComplete = 'Thank you for your order!'
 
 describe('Buy a black t-shirt', () => {
@@ -25,8 +25,7 @@ describe('Buy a black t-shirt', () => {
     loginPage.signIn(userName, pass)
 
     // Act
-    productList.selectTShirt()
-    itemPage.addTShirtItem()
+    productList.addToCartItem(itemTShirt)
     shoppingCart.goShoppingCart()
     shoppingCart.checkoutCart()
     informationPage.checkoutUserInformation(firstName, lastName, postalCode)

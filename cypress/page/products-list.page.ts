@@ -1,18 +1,18 @@
 class ProductListPage {
-  private tShirtItem: string;
+  private productList: string;
   private btnAddTShirtItem: string;
 
   constructor() {
-    this.tShirtItem = '#item_1_img_link';
+    this.productList = '#inventory_container';
     this.btnAddTShirtItem = '#add-to-cart-sauce-labs-bolt-t-shirt'
     }
 
-  public selectTShirt(): void {
-    cy.get(this.tShirtItem).click();
+  public addToCartItem(nameItem: string): void {
+    this.findProductByName(nameItem).find(this.btnAddTShirtItem).click();
     }
 
-  public addToCardTShirt(): void {
-    cy.get(this.btnAddTShirtItem).click();
+  private findProductByName (inventoryItem: string) {
+    return cy.get(this.productList).filter(`:contains(${inventoryItem})`);
   }
 }
 
