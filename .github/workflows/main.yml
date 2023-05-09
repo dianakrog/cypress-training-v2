@@ -21,8 +21,5 @@ jobs:
       - name: Code style
         run: npm run lint
 
-      - name: UI E2E Tests
-        uses: cypress-io/github-action@v4
-        with:
-          browser: chrome
-          headless: true
+      - name: Run Test
+        run: npm run runtest
